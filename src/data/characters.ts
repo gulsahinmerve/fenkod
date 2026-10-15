@@ -1,0 +1,273 @@
+import { Character, Badge, CharacterOutfit, CharacterAccessory } from '../types/game';
+
+export const CHARACTERS: Character[] = [
+  {
+    id: 'cosmic_cat',
+    name: 'Kozmik Kedi',
+    title: 'Hızlı Algoritma Avcısı',
+    description: 'Uzay kaskı ve çevik pençeleriyle labirentteki en kestirme yolları bir bakışta hesaplar.',
+    primaryColor: '#F59E0B',
+    secondaryColor: '#FBBF24',
+    tag: 'Çevik Kaşif',
+    unlockedAtLevel: 1,
+  },
+  {
+    id: 'robo_fen',
+    name: 'Robo-Fen',
+    title: 'Bilim ve Fizik Ünitesi',
+    description: 'Sensörleriyle kuvvet vektörlerini anında ölçer, bileşke kuvvet problemlerini lazer hızıyla çözer.',
+    primaryColor: '#3B82F6',
+    secondaryColor: '#60A5FA',
+    tag: 'Fizik Analisti',
+    unlockedAtLevel: 1,
+  },
+  {
+    id: 'astronaut_ada',
+    name: 'Astronot Ada',
+    title: 'Uzay Görevi Kaptanı',
+    description: 'Güneş sistemi ve tutulmalar konusunda uzman cesur genç bilim insanı. Sıfır yer çekimi ustası!',
+    primaryColor: '#EC4899',
+    secondaryColor: '#F472B6',
+    tag: 'Gezegen Uzmanı',
+    unlockedAtLevel: 1,
+  },
+  {
+    id: 'clever_fox',
+    name: 'Zeki Tilki',
+    title: 'Kodlama Stratejisti',
+    description: 'Döngü ve koşul bloklarını en akıllıca birleştirip en az komutla hedefe ulaşan taktik dehası.',
+    primaryColor: '#EA580C',
+    secondaryColor: '#FB923C',
+    tag: 'Taktik Dehası',
+    unlockedAtLevel: 2,
+  },
+  {
+    id: 'mini_alien',
+    name: 'Mini Uzaylı',
+    title: 'Galaksi Gezgini',
+    description: 'Üç parlayan gözü ve neşeli enerjisiyle asteroidleri neşeyle atlatır, kristalleri anında toplar.',
+    primaryColor: '#10B981',
+    secondaryColor: '#34D399',
+    tag: 'Yıldız Dostu',
+    unlockedAtLevel: 2,
+  },
+  {
+    id: 'coding_turtle',
+    name: 'Kodlama Kaplumbağası',
+    title: 'Sağlam Algoritma Ustası',
+    description: 'Sırtındaki mikroçip zırhıyla adım adım ilerler; hiçbir duvara çarpmaz, hata ayıklamada rakipsizdir.',
+    primaryColor: '#06B6D4',
+    secondaryColor: '#22D3EE',
+    tag: 'Hata Ayıklayıcı',
+    unlockedAtLevel: 3,
+  },
+  {
+    id: 'prof_einstein',
+    name: 'Küçük Einstein',
+    title: 'Kuantum & Deney Dehası',
+    description: 'Işıl ışıl parlayan saçları ve meraklı zihniyle atomları, tutulmaları ve ışığı incelemeye bayılır.',
+    primaryColor: '#8B5CF6',
+    secondaryColor: '#A78BFA',
+    tag: 'Teorik Fizikçi',
+    unlockedAtLevel: 3,
+  },
+  {
+    id: 'cyber_dino',
+    name: 'Siber Dino',
+    title: 'Fosil & Jeoloji Kaşifi',
+    description: 'Sevimli mekanik dinozor yavrusu! Yeryüzü katmanlarını ve devasa gezegen kütlelerini tarar.',
+    primaryColor: '#F43F5E',
+    secondaryColor: '#FB7185',
+    tag: 'Paleo-Robot',
+    unlockedAtLevel: 4,
+  },
+  {
+    id: 'aqua_diver',
+    name: 'Kaptan Deniz',
+    title: 'Derin Bilim Biyoloğu',
+    description: 'Işıltılı dalgıç başlığı ve su kabarcıklarıyla basınç, kaldırma kuvveti ve ekosistemleri keşfeder.',
+    primaryColor: '#0EA5E9',
+    secondaryColor: '#38BDF8',
+    tag: 'Okyanus Kaşifi',
+    unlockedAtLevel: 4,
+  },
+  {
+    id: 'nature_elf',
+    name: 'Eko-Bot Muhafız',
+    title: 'Temiz Enerji Savunucusu',
+    description: 'Güneş paneli kanatları ve rüzgar sensörleriyle çevre dostu yeşil enerjiyi tüm galaksiye yayar.',
+    primaryColor: '#84CC16',
+    secondaryColor: '#A3E635',
+    tag: 'Eko Kahraman',
+    unlockedAtLevel: 5,
+  }
+];
+
+export const CHARACTER_OUTFITS: CharacterOutfit[] = [
+  {
+    id: 'outfit_default',
+    name: 'Standart Üniforma',
+    description: 'Karakterin orijinal, ikonik macera kıyafeti.',
+    icon: '👕',
+    tag: 'Klasik',
+    levelRequired: 1,
+  },
+  {
+    id: 'outfit_lab',
+    name: 'Bilim İnsanı Önlüğü',
+    description: 'Kar beyazı laboratuvar önlüğü ve kimya tüpü cepleri.',
+    icon: '🥼',
+    tag: 'Laboratuvar',
+    levelRequired: 1,
+  },
+  {
+    id: 'outfit_cyber',
+    name: 'Kuantum Siber Zırhı',
+    description: 'Neon mavi ve mor ışık hatlarıyla parıldayan kuantum alaşımı zırh.',
+    icon: '🦾',
+    tag: 'Siber Teknoloji',
+    levelRequired: 2,
+  },
+  {
+    id: 'outfit_diver',
+    name: 'Derin Deniz Kostümü',
+    description: 'Turkuaz renkli basınca dayanıklı hidro-kostüm.',
+    icon: '🤿',
+    tag: 'Okyanus',
+    levelRequired: 3,
+  },
+  {
+    id: 'outfit_ninja',
+    name: 'Kod Ninjası Pelerini',
+    description: 'Gece gökyüzü moru pelerin ve altın tokalı algoritma kuşağı.',
+    icon: '🥷',
+    tag: 'Algoritma',
+    levelRequired: 4,
+  },
+  {
+    id: 'outfit_gold',
+    name: 'Galaktik Şampiyon Zırhı',
+    description: 'Saf altın ve elmas işlemeli nihai fen şampiyonu zırhı!',
+    icon: '✨',
+    tag: 'Şampiyon',
+    levelRequired: 5,
+  }
+];
+
+export const CHARACTER_ACCESSORIES: CharacterAccessory[] = [
+  {
+    id: 'acc_none',
+    name: 'Aksesuarsız',
+    description: 'Doğal kahraman stili.',
+    icon: '🚫',
+    tag: 'Sade',
+    levelRequired: 1,
+  },
+  {
+    id: 'acc_glasses',
+    name: 'Kuantum Akıllı Gözlük',
+    description: 'Kuvvet vektörlerini ve gezegen yörüngelerini gösteren neon mavi vizör.',
+    icon: '👓',
+    tag: 'Teknoloji',
+    levelRequired: 1,
+  },
+  {
+    id: 'acc_magnifier',
+    name: 'Fen Araştırma Büyüteci',
+    description: 'Kristalleri ve mikroskobik detayları incelemek için dev büyüteç.',
+    icon: '🔍',
+    tag: 'Dedektif',
+    levelRequired: 2,
+  },
+  {
+    id: 'acc_space_helmet',
+    name: 'Kristal Astronot Kaskı',
+    description: 'Yıldız tozu yansımalı parıltılı cam uzay fanusu.',
+    icon: '👨‍🚀',
+    tag: 'Uzay',
+    levelRequired: 2,
+  },
+  {
+    id: 'acc_propeller',
+    name: 'Gökkuşağı Pervaneli Şapka',
+    description: 'Rüzgar kuvvetiyle neşeyle dönen rengarenk pervane.',
+    icon: '🧢',
+    tag: 'Neşeli',
+    levelRequired: 3,
+  },
+  {
+    id: 'acc_antenna',
+    name: 'Yıldız İletişim Anteni',
+    description: 'Galaksiler arası fen sorularını yakalayan sinyal anteni.',
+    icon: '📡',
+    tag: 'Sinyal',
+    levelRequired: 3,
+  },
+  {
+    id: 'acc_wizard_hat',
+    name: 'Fen Sihirbazı Şapkası',
+    description: 'Yıldızlar ve formüllerle süslü sivri kadife şapka.',
+    icon: '🧙',
+    tag: 'Gizemli',
+    levelRequired: 4,
+  },
+  {
+    id: 'acc_crown',
+    name: 'Bilim Şampiyonu Tacı',
+    description: 'Tüm MEB fen kazanımlarını fetheden şampiyonun altın tacı!',
+    icon: '👑',
+    tag: 'Efsanevi',
+    levelRequired: 5,
+  }
+];
+
+export const BADGES: Badge[] = [
+  {
+    id: 'badge_algo',
+    title: 'Algoritma Ustası',
+    description: 'Tüm komutları sırasıyla ve eksiksiz bir mantıkla çalıştırdın.',
+    icon: '⚡',
+    category: 'coding',
+    conditionText: 'Bir seviyeyi en az komutla başarıyla bitir.'
+  },
+  {
+    id: 'badge_science',
+    title: 'Fen Dedektifi',
+    description: 'Fen bilimleri sorularına ilk denemede hatasız yanıt verdin.',
+    icon: '🔬',
+    category: 'science',
+    conditionText: '3 fen sorusunu ardışık olarak doğru cevapla.'
+  },
+  {
+    id: 'badge_force',
+    title: 'Bileşke Kuvvet Uzmanı',
+    description: 'Zıt ve aynı yönlü kuvvetlerin net değerini hatasız hesapladın.',
+    icon: '🎯',
+    category: 'science',
+    conditionText: 'Kuvvetler Arenası veya Bileşke seviyesini tamamla.'
+  },
+  {
+    id: 'badge_debug',
+    title: 'Hata Ayıklama Kahramanı',
+    description: 'Algoritmanı dikkatlice gözden geçirip duvara çarpmadan rotayı düzelttin.',
+    icon: '🛡️',
+    category: 'coding',
+    conditionText: 'Durdur ve Sıfırla komutlarıyla rotayı optimize et.'
+  },
+  {
+    id: 'badge_space',
+    title: 'Uzay Kaşifi',
+    description: 'Güneş sistemi gezegenlerini ve tutulma düzenlerini ezber bozan bir başarıyla geçtin.',
+    icon: '🚀',
+    category: 'science',
+    conditionText: 'Gezegenler ve Tutulma seviyelerini bitir.'
+  },
+  {
+    id: 'badge_master',
+    title: 'FenKod Ustası',
+    description: 'Tüm macera seviyelerini ve büyük finali yıldızlarla tamamladın!',
+    icon: '👑',
+    category: 'mastery',
+    conditionText: '6. Final Seviyesini başarıyla tamamla.'
+  }
+];

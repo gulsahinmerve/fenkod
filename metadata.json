@@ -1,0 +1,6 @@
+{
+  "name": "FENKOD MACERASI",
+  "description": "Kodla, Keşfet, Öğren, Hedefe Ulaş! Ortaokul fen bilimleri ve blok tabanlı kodlama macera oyunu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
